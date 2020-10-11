@@ -1,6 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+	  <!-- The core Firebase JS SDK is always required and must be listed first -->
+	  <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+
+	  <!-- TODO: Add SDKs for Firebase products that you want to use
+		   https://firebase.google.com/docs/web/setup#available-libraries -->
+	  <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-analytics.js"></script>
+
+	  <script>
+		  // Your web app's Firebase configuration
+		  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+		  var firebaseConfig = {
+			  apiKey: "AIzaSyAwn0scRxh5yIrpurLGX_9kwt-_COQT0rc",
+			  authDomain: "eps-components.firebaseapp.com",
+			  databaseURL: "https://eps-components.firebaseio.com",
+			  projectId: "eps-components",
+			  storageBucket: "eps-components.appspot.com",
+			  messagingSenderId: "925621774821",
+			  appId: "1:925621774821:web:9357b659354e2523a7e70c",
+			  measurementId: "G-GNEH1GWW93"
+		  };
+		  // Initialize Firebase
+		  firebase.initializeApp(firebaseConfig);
+		  firebase.analytics();
+	  </script>
+
+	  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
