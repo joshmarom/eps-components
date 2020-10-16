@@ -1,8 +1,21 @@
 import React from 'react';
 import { fade } from "@material-ui/core/styles/colorManipulator";
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import { withStyles } from '@material-ui/core/styles';
 import MuiButton from '@material-ui/core/Button';
 import theme from './../eps-theme';
+
+const errorTheme = createMuiTheme( {
+		palette: {
+			primary: {
+				light: "rgba(221, 52, 52, 1)",
+				main: "rgba(176, 27, 27, 1)",
+				dark: "rgba(138, 24, 24, 1)",
+				contrastText: "#fff",
+			},
+		}
+	} );
+
 
 const ErrorButton = withStyles( {
 	textPrimary: {
@@ -281,7 +294,9 @@ const Button = ( props ) => {
 		StatusButton = isStatus ? StatusButtons[ color ] : MuiButton,
 		colorProp = isStatus ? 'primary' : color;
 	return (
-		<StatusButton  { ...props } color={ colorProp } >{ props.children }</StatusButton>
+		<ThemeProvider theme={errorTheme}>
+			<StatusButton  { ...props } color={ colorProp } >{ props.children }</StatusButton>
+		</ThemeProvider>
 	);
 };
 
